@@ -1,5 +1,4 @@
 import time
-
 from pages.base_page import BasePage
 from pages.locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
@@ -32,3 +31,9 @@ class ProductPage(BasePage):
     def do_product_prices_match(self):
         return self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text == \
             self.browser.find_element(*ProductPageLocators.CART_TOTAL).text
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE)
+
+    def success_message_should_be_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)
