@@ -22,4 +22,16 @@ class ProductPageLocators:
     ALERT_PRODUCT_NAME = (By.CSS_SELECTOR, ".alertinner strong")
     CART_TOTAL = (By.CSS_SELECTOR, ".alertinner p strong")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+    SUCCESS_MESSAGE = (By.CLASS_NAME, "alert-success")
+
+
+class CommonLocators:  # BasePageLocators
+    CART_LINK = (By.CSS_SELECTOR, ".btn-group a")
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
+class CartLocators:
+    EMPTY_CART_MESSAGE = (By.CSS_SELECTOR, "#content_inner p")
+    CART_ITEMS_DIV = (By.CLASS_NAME, "basket-items")
 
