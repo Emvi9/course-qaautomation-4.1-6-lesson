@@ -35,7 +35,7 @@ class BasePage:
         return True
 
     def go_to_login_page(self):
-        login_link = self.browser.find_element(*CommonLocators.LOGIN_LINK_INVALID)
+        login_link = self.browser.find_element(*CommonLocators.LOGIN_LINK)
         login_link.click()
 
     def should_be_login_link(self):
@@ -43,3 +43,7 @@ class BasePage:
 
     def go_to_cart(self):
         self.browser.find_element(*CommonLocators.CART_LINK).click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*CommonLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
