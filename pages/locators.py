@@ -15,6 +15,8 @@ class LoginPageLocators:
     LOGIN_EMAIL = (By.CSS_SELECTOR, "input[id='id_login-username']")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "input[id='id_login-password']")
 
+    SUBMIT_BUTTON = (By.XPATH, '//*[@id="register_form"]/button')
+
 
 class ProductPageLocators:
     ADD_TO_CART = (By.CLASS_NAME, "btn-add-to-basket")
@@ -27,8 +29,9 @@ class ProductPageLocators:
 
 class CommonLocators:  # BasePageLocators
     CART_LINK = (By.CSS_SELECTOR, ".btn-group a")
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    LOGIN_LINK = (By.ID, "login_link")
+    LOGIN_LINK_INVALID = (By.ID, "login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class CartLocators:
