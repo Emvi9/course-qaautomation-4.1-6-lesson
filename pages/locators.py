@@ -11,7 +11,7 @@ class LoginPageLocators:
     REGISTRATION_PASSWORD = (By.CSS_SELECTOR, "input[id='id_registration-password1']")
     REGISTRATION_PASSWORD_REPEAT = (By.CSS_SELECTOR, "input[id='id_registration-password2']")
 
-    LOGIN_FORM = (By.ID, "login_form")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     LOGIN_EMAIL = (By.CSS_SELECTOR, "input[id='id_login-username']")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "input[id='id_login-password']")
 
