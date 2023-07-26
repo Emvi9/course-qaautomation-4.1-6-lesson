@@ -36,6 +36,15 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 
 @pytest.mark.need_review
+def test_guest_can_add_product_to_cart(browser):
+    product_page = ProductPage(browser, link)
+    product_page.open()
+    product_page.press_add_to_cart()
+    product_page.do_product_names_match(), f"[Name match error {link}]"
+    product_page.do_product_prices_match(), f"[Price match error {link}"
+
+
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
