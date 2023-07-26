@@ -21,8 +21,8 @@ class TestLoginFromMainPage:
         page.should_be_login_link()
 
 
-def test_guest_cant_see_product_in_basket_opened_from_main_page(self, browser):
-    homepage_link = "http://selenium1py.pythonanywhere.com/en-gb/"
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    homepage_link = "http://selenium1py.pythonanywhere.com/"
     page = CartPage(browser, homepage_link)
     page.open()
     page.go_to_cart()
