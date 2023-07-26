@@ -25,11 +25,11 @@ class ProductPage(BasePage):
         self.browser.find_element(*ProductPageLocators.ADD_TO_CART).click()
 
     def do_product_names_match(self):
-        return self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text == \
+        assert self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text == \
             self.browser.find_element(*ProductPageLocators.ALERT_PRODUCT_NAME).text
 
     def do_product_prices_match(self):
-        return self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text == \
+        assert self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text == \
             self.browser.find_element(*ProductPageLocators.CART_TOTAL).text
 
     def should_not_be_success_message(self):
